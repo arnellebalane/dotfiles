@@ -6,3 +6,6 @@ Arnelle's dotfiles.
 - ruby version manager
 - virtualenv wrapper
 - git
+
+#####vim installed apps
+- pathogen
