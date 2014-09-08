@@ -1,0 +1,11 @@
+[user]
+  email = arnellebalane@gmail.com
+  name = Arnelle Balane
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = yellow bold
+  local = yellow
+  remote = blue
