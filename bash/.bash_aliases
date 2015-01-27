@@ -1,4 +1,43 @@
+# general aliases
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias -- -="cd -"
+alias ~="cd ~"
+alias ls="ls --color=auto"
+alias l="ls -ap"
+alias ll="ls -al"
+
+# git aliases
+alias gi="git init"
+alias gs="git status"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias ga="git add"
+alias gb="git branch"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gca="git commit --amend"
+alias gp="git push"
+alias gpo="git push origin"
+alias gpu="git pull origin"
+alias gco="git checkout"
+alias gl="git log"
+alias glo="git log --oneline"
+alias gf="git fetch"
+alias gr="git remote -v"
+
+# django aliases
 alias manage="python manage.py"
+alias bmanage="./bin/manage"
+alias runserver="./bin/manage runserver"
+
+# lampp aliases
 alias lampp="sudo /opt/lampp/lampp"
-alias offline="wget --mirror --convert-links --backup-converted --no-clobber --adjust-extension"
+
+# customcommands aliases
 alias bldout="~/.customcommands/bldout/bldout.sh"
+
+# other aliases
+# save given url offline
+alias offline="wget --mirror --convert-links --backup-converted --no-clobber --adjust-extension"
