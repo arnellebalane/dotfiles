@@ -117,3 +117,14 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Enable 256 colors
+# Install ncurses-term to enable this
+export TERM=xterm-256color
+
+# Install npm packages to another location to avoid using sudo everytime
+NPM_PACKAGES="${HOME}/.npm-packages"
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+PATH="$NPM_PACKAGES/bin/:$PATH"
+unset MANPATH
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
