@@ -7,6 +7,7 @@ alias ~="cd ~"
 alias ls="ls --color=auto"
 alias l="ls -ap"
 alias ll="ls -al"
+alias la="ls -a"
 
 # git aliases
 alias gi="git init"
@@ -26,6 +27,7 @@ alias gl="git log"
 alias glo="git log --oneline"
 alias gf="git fetch"
 alias gr="git remote -v"
+alias gcl="git clone"
 
 # django aliases
 alias manage="python manage.py"
@@ -41,3 +43,6 @@ alias bldout="~/.customcommands/bldout/bldout.sh"
 # other aliases
 # save given url offline
 alias offline="wget --mirror --convert-links --backup-converted --no-clobber --adjust-extension"
+
+# alias to the nw (node-webkit) executable
+alias nw="~/.nw/nw"
