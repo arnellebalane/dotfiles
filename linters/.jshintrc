@@ -1,0 +1,29 @@
+/**
+ *  Check out the default JSHint options at:
+ *  https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+ */
+{
+    "bitwise": true,
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "immed": true,
+    "latedef": true,
+    // Change `newcap` option later to `true`
+    "newcap": false,
+    "noempty": true,
+    "quotmark": "single",
+    "maxlen": 79,
+    "undef": true,
+    "laxbreak": true,
+    "browser": true,
+    "devel": true,
+    "jquery": true,
+    "node": true,
+    "globals": {
+        "require": true,
+        "define": true,
+        "Zepto": true
+    }
+}
