@@ -24,6 +24,7 @@
     "globals": {
         "require": true,
         "define": true,
-        "Zepto": true
+        "Zepto": true,
+        "Promise": true
     }
 }
