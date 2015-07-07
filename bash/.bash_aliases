@@ -44,5 +44,8 @@ alias bldout="~/.customcommands/bldout/bldout.sh"
 # save given url offline
 alias offline="wget --mirror --convert-links --backup-converted --no-clobber --adjust-extension"
 
+# copy file contents to clipboard
+clipcopy="xclip -sel clip <"
+
 # alias to the nw (node-webkit) executable
 alias nw="~/.nw/nw"
