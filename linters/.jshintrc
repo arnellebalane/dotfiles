@@ -9,7 +9,6 @@
     "eqeqeq": true,
     "forin": true,
     "immed": true,
-    "latedef": true,
     // Change `newcap` option later to `true`
     "newcap": false,
     "noempty": true,
