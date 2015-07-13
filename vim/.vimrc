@@ -93,7 +93,7 @@ set list listchars=tab:»·,trail:·
 """ CUSTOM KEY-BINDINGS
 
 " color scheme
-color codeschool
+" color codeschool
 
 " open ~/.vimrc
 nnoremap <A-v> :split<Space>~/.vimrc<CR>
@@ -150,10 +150,11 @@ set timeout ttimeoutlen=10
 """ NERDTree configurations
 
 " open nerdtree on vim startup if no files is opened
-autocmd vimenter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd vimenter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " hotkey to toggle NERDTree
-map <F2> :NERDTreeToggle<CR>
+" map <F2> :NERDTreeToggle<CR>
 
 " close vi if the only open window is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
