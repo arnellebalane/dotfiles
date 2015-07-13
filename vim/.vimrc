@@ -26,11 +26,11 @@ filetype plugin indent on
 
 " 4-space indentation
 set expandtab
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 
-"round indent to nearest multiple of 2
+"round indent to nearest multiple of 4
 set shiftround
 
 " no line wrapping
