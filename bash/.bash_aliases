@@ -37,12 +37,10 @@ alias runserver="./bin/manage runserver"
 # lampp aliases
 alias lampp="sudo /opt/lampp/lampp"
 
-# customcommands aliases
-alias bldout="~/.customcommands/bldout/bldout.sh"
-
 # other aliases
 # save given url offline
 alias offline="wget --mirror --convert-links --backup-converted --no-clobber --adjust-extension"
+alias timelog="time-log"
 
 # copy file contents to clipboard
 clipcopy="xclip -sel clip <"
