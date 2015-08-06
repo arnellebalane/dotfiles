@@ -1,0 +1,22 @@
+# set default editors
+export EDITOR="vim"
+export GIT_EDITOR="vim"
+
+# load z, yo
+. ~/.z.sh
+
+# setup for non-sudo npm installs
+export NPM_PACKAGES="$HOME/.npm-packages"
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+export PATH="$PATH:$NPM_PACKAGES/bin"
+
+# setup for Go
+export GOROOT="$HOME/.go"
+export PATH="$PATH:$GOROOT/bin"
+
+# add path to hub executable to PATH environment variable
+export PATH="$PATH:$HOME/Documents/github/hub"
+
+# setup for google app engine
+export PATH="$PATH:$HOME/.gae"
+
