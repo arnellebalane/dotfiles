@@ -7,9 +7,9 @@
     "camelcase": true,
     "curly": true,
     "eqeqeq": true,
+    "esnext": true,
     "forin": true,
     "immed": true,
-    // Change `newcap` option later to `true`
     "newcap": false,
     "noempty": true,
     "quotmark": "single",
