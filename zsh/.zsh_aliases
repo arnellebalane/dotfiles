@@ -26,11 +26,14 @@ alias gr="git remote -v"
 alias gcl="git clone"
 
 # django aliases
-alias manage="python manage.py"
-alias bmanage="./bin/manage"
-alias runserver="./bin/manage runserver"
+alias m="python manage.py"
+alias bm="./bin/manage"
+alias bmr="./bin/manage runserver"
+alias bmc="./bin/manage collectstatic"
+alias bmm="./bin/manage migrate"
 
 # other aliases
 alias offline="wget --mirror --convert-links --backup-converted --no-clobber --adjust-extension"
-alias timelog="time-log"
+alias timelog="time-log" ### npm install -g time-log
 alias clipcopy="xclip -sel clip <"
+alias st="speed-test" ### npm install -g speed-test
