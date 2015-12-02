@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/arnelle/.oh-my-zsh
+  export ZSH=/home/arnelle/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gitster"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,13 +53,10 @@ plugins=()
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/arnelle/.go/bin:/home/arnelle/Documents/github/hub:/home/arnelle/.go/bin:/home/arnelle/Documents/github/hub"
+  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
-source $HOME/.zsh_profile
-source $HOME/.zsh_aliases
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -86,5 +83,11 @@ source $HOME/.zsh_aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# Load other .zsh-* config files
+if [ -f ~/.zsh_profile ]; then
+  . ~/.zsh_profile
+fi
+
+if [ -f ~/.zsh_aliases ]; then
+  . ~/.zsh_aliases
+fi
