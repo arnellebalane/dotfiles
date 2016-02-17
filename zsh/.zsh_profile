@@ -20,10 +20,6 @@ export PATH="$PATH:$HOME/Documents/github/hub"
 # setup for google app engine
 export PATH="$PATH:$HOME/.gae"
 
-# setup for nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 # load virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
 
