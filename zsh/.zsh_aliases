@@ -25,6 +25,8 @@ alias glo="git log --oneline"
 alias gf="git fetch"
 alias gr="git remote -v"
 alias gcl="git clone"
+# use github/hub package
+alias git="hub"
 
 # django aliases
 alias m="python manage.py"

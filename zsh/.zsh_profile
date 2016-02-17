@@ -1,25 +1,23 @@
-# set default editors
-export EDITOR="vim"
-export GIT_EDITOR="vim"
+# Set defautl editors
+export EDITOR="/usr/bin/vim"
+export GIT_EDITOR="/usr/bin/vim"
 
-# load z, yo
-. ~/.z.sh
+# Add custom bin directory in home to paths
+export PATH="${HOME}/bin:$PATH"
 
-# setup for non-sudo npm installs
-export NPM_PACKAGES="$HOME/.npm-packages"
+# Install global npm to a custom directory so that
+# there's no need to sudo every install
+export NPM_PACKAGES="${HOME}/.npm-packages"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-export PATH="$PATH:$NPM_PACKAGES/bin"
+export PATH="$NPM_PACKAGES/bin:$PATH"
 
-# setup for Go
-export GOROOT="$HOME/.go"
-export PATH="$PATH:$GOROOT/bin"
+# Load the z script
+. ~/bin/z.sh
 
-# add path to hub executable to PATH environment variable
-export PATH="$PATH:$HOME/Documents/github/hub"
-
-# setup for google app engine
-export PATH="$PATH:$HOME/.gae"
-
-# load virtualenvwrapper
+# Load virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
 
+# Custom installation directory for Go
+export GOPATH="${HOME}"
+export GOROOT="${HOME}/.go"
+export PATH="$PATH:$GOROOT/bin"
