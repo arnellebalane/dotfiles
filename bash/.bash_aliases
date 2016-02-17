@@ -12,6 +12,7 @@ alias la="ls -a"
 # git aliases
 alias gi="git init"
 alias gs="git status"
+alias gss="git status -s"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias ga="git add"
