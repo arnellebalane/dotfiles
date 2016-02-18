@@ -1,5 +1,6 @@
 {
     "disallowEmptyBlocks": true,
+    "disallowMultipleLineBreaks": false,
     "disallowMultipleLineStrings": true,
     "disallowMultipleSpaces": true,
     "disallowOperatorBeforeLineBreak": [
@@ -12,12 +13,14 @@
         "="
     ],
     "disallowSpacesInCallExpression": true,
+    "disallowSpacesInsideTemplateStringPlaceholders": true,
     "disallowTrailingComma": true,
     "disallowTrailingWhitespace": true,
     "maximumLineLength": 79,
     "requireCurlyBraces": true,
     "requireDotNotation": true,
     "requireLineFeedAtFileEnd": true,
+    "requirePaddingNewLinesAfterBlocks": false,
     "requireSemicolons": true,
     "requireSpaceAfterBinaryOperators": true,
     "requireSpaceAfterKeywords": [
@@ -54,6 +57,7 @@
         "beforeOpeningCurlyBrace": true
     },
     "requireSpacesInsideObjectBrackets": "all",
+    "requireTrailingComma": false,
     "validateIndentation": 4,
     "validateParameterSeparator": ", ",
     "validateQuoteMarks": "'"
