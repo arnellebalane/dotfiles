@@ -12,6 +12,7 @@
         ".",
         "="
     ],
+    "disallowQuotedKeysInObjects": false,
     "disallowSpacesInCallExpression": true,
     "disallowSpacesInsideTemplateStringPlaceholders": true,
     "disallowTrailingComma": true,
