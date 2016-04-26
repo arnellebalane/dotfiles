@@ -71,7 +71,7 @@
         "no-labels": ["warn", {"allowLoop": true}],
         "no-lone-blocks": ["error"],
         "no-loop-func": ["error"],
-        "no-magic-numbers": ["warn", {"ignoreArrayIndexes": true}],
+        "no-magic-numbers": ["off"],
         "no-multi-spaces": ["error"],
         "no-multi-str": ["error"],
         "no-native-reassign": ["error"],
