@@ -1,0 +1,28 @@
+[global_config]
+  window_state = maximise
+  handle_size = 0
+  inactive_color_offset = 0.44
+[keybindings]
+  resize_up = <Primary><Shift>k
+  resize_right = <Primary><Shift>l
+  resize_down = <Primary><Shift>j
+  resize_left = <Primary><Shift>h
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    background_image = None
+    use_system_font = False
+    palette = "#000000:#f44336:#4caf50:#ffeb3b:#2196f3:#673ab7:#00bcd4:#ffffff:#37474f:#e57373:#81c784:#fff176:#64b5f6:#9575cd:#4dd0e1:#eceff1"
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    font = mononoki 10
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
