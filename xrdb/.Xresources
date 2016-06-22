@@ -1,0 +1,74 @@
+! Terminal Colors
+! Black
+*color0: #000000
+*color8: #263238
+! Red
+*color1: #f44336
+*color9: #ef5350
+! Green
+*color2: #4caf50
+*color10: #66bb6a
+! Yellow
+*color3: #ffeb3b
+*color11: #ffee58
+! Blue
+*color4: #2196f3
+*color12: #42a5f5
+! Magenta
+*color5: #9c27b0
+*color13: #ab47bc
+! Cyan
+*color6: #00bcd4
+*color14: #26c6da
+! White
+*color7: #ffffff
+*color15: #eceff1
+
+*foreground: #ffffff
+*background: #000000
+
+
+
+! XTerm Configs
+xterm*utf8: 1
+xterm*locale: true
+xterm*faceName: Mononoki:size=10:antialias=false
+xterm*scaleHeight: 1
+xterm*borderWidth: 0
+xterm*saveLines: 4096
+xterm*cursorBlink: true
+xterm*selectToClipboard: true
+
+
+
+! URxvt Configs
+URxvt*background: #000000
+URxvt*foreground: #ffffff
+
+URxvt*color0: #000000
+URxvt*color8: #263238
+URxvt*color1: #F44336
+URxvt*color9: #E57373
+URxvt*color2: #4CAF50
+URxvt*color10: #81C784
+URxvt*color3: #FFEB3B
+URxvt*color11: #FFF176
+URxvt*color4: #2196F3
+URxvt*color12: #64B5F6
+URxvt*color5: #673AB7
+URxvt*color13: #9575CD
+URxvt*color6: #00BCD4
+URxvt*color14: #4DD0E1
+URxvt*color7: #FFFFFF
+URxvt*color15: #ECEFF1
+
+URxvt*font: xft:Mononoki:pixelsize=14:antialias=false
+URxvt*letterSpace: -1
+
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: google-chrome
+URxvt.matcher.button: 1
+
+URxvt*saveLines: 10000
+URxvt*scrollBar: false
+URxvt*cursorBlink: true
