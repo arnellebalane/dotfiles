@@ -7,9 +7,13 @@ export PATH="${HOME}/bin:$PATH"
 
 # Install global npm to a custom directory so that
 # there's no need to sudo every install
-export NPM_PACKAGES="${HOME}/.npm-packages"
-export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-export PATH="$NPM_PACKAGES/bin:$PATH"
+# export NPM_PACKAGES="${HOME}/.npm-packages"
+# export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+# export PATH="$NPM_PACKAGES/bin:$PATH"
+
+# Load nvm
+export NVM_DIR="/home/arnelle/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Load the z script
 . ~/bin/z.sh
@@ -21,3 +25,21 @@ source /usr/local/bin/virtualenvwrapper.sh
 export GOPATH="${HOME}"
 export GOROOT="${HOME}/.go"
 export PATH="$PATH:$GOROOT/bin"
+
+# Add Heroku Toolbelt to PATH
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/arnelle/.googlecloudsdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/home/arnelle/.googlecloudsdk/completion.zsh.inc'
+
+# Nice defaults for the `tree` command from Wes Bos
+function t() {
+    # Default to 3 levels deep, do more with `t 5` or `t 1`
+    tree -I ".git|node_modules|bower_components" --dirsfirst --filelimit 25 -L ${1:-3} -aC $2
+}
+
+# Load zmv buildin function
+autoload zmv
