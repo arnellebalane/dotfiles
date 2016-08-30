@@ -1,6 +1,4 @@
 # general aliases
-alias -- -="cd -"
-alias ~="cd ~"
 alias ls="ls --color=auto"
 alias la="ls -a"
 alias ll="ls -l"
@@ -27,19 +25,3 @@ alias gr="git remote -v"
 alias gcl="git clone"
 alias gsit="git stash --include-untracked"
 alias gsp="git stash pop"
-# use github/hub package
-# alias git="hub"
-
-# django aliases
-alias m="python manage.py"
-alias bm="./bin/manage"
-alias bmr="./bin/manage runserver"
-alias bmc="./bin/manage collectstatic"
-alias bmm="./bin/manage migrate"
-alias bms="./bin/manage shell"
-
-# other aliases
-alias offline="wget --mirror --convert-links --backup-converted --no-clobber --adjust-extension"
-alias timelog="time-log" ### npm install -g time-log
-alias clipcopy="xclip -sel clip <"
-alias st="speed-test" ### npm install -g speed-test

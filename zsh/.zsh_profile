@@ -5,21 +5,8 @@ export GIT_EDITOR="/usr/bin/vim"
 # Add custom bin directory in home to paths
 export PATH="${HOME}/bin:$PATH"
 
-# Install global npm to a custom directory so that
-# there's no need to sudo every install
-# export NPM_PACKAGES="${HOME}/.npm-packages"
-# export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-# export PATH="$NPM_PACKAGES/bin:$PATH"
-
-# Load nvm
-export NVM_DIR="/home/arnelle/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 # Load the z script
 . ~/bin/z.sh
-
-# Load virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
 
 # Custom installation directory for Go
 export GOPATH="${HOME}"
@@ -28,6 +15,13 @@ export PATH="$PATH:$GOROOT/bin"
 
 # Add Heroku Toolbelt to PATH
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Load nvm
+export NVM_DIR="${HOME}/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Load virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 source '/home/arnelle/.googlecloudsdk/path.zsh.inc'
@@ -43,3 +37,6 @@ function t() {
 
 # Load zmv buildin function
 autoload zmv
+
+# Add local node_modules binaries to path
+export PATH="$PATH:./node_modules/.bin"
