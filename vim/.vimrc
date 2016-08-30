@@ -1,6 +1,6 @@
 " .vimrc
 " enable pathogen.vim
-execute pathogen#infect()
+" execute pathogen#infect()
 
 " don't create backups
 set nobackup
