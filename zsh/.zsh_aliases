@@ -19,9 +19,13 @@ alias gpo="git push origin"
 alias gpu="git pull origin"
 alias gco="git checkout"
 alias gl="git log"
+alias gll="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias glo="git log --oneline"
 alias gf="git fetch"
 alias gr="git remote -v"
 alias gcl="git clone"
 alias gsit="git stash --include-untracked"
 alias gsp="git stash pop"
+
+# other aliases
+alias ack="ack-grep"

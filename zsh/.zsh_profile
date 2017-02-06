@@ -38,5 +38,8 @@ function t() {
 # Load zmv buildin function
 autoload zmv
 
-# Add local node_modules binaries to path
+# Lighthouse setup
+export LIGHTHOUSE_CHROMIUM_PATH=/usr/bin/google-chrome
+
+# Add current directory's node_modules binaries to PATH
 export PATH="$PATH:./node_modules/.bin"
