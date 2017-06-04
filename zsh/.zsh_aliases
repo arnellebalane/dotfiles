@@ -26,6 +26,18 @@ alias gr="git remote -v"
 alias gcl="git clone"
 alias gsit="git stash --include-untracked"
 alias gsp="git stash pop"
+alias gm="git merge"
+alias gcfd="git clean -fd"
+
+# django aliases
+alias bm="./bin/manage"
+alias bmr="./bin/manage runserver"
+alias bmm="./bin/manage migrate"
+alias bmc="./bin/manage collectstatic"
+alias bms="./bin/manage shell"
+alias m="python manage.py"
+alias mr="python manage.py runserver"
+alias mm="python manage.py migrate"
 
 # other aliases
 alias ack="ack-grep"
