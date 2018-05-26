@@ -23,6 +23,7 @@ source $ZSH/oh-my-zsh.sh
 . ~/.prompt
 . ~/.aliases
 . ~/.functions
+. ~/.profile
 
 # Load local .extra file, machine-specific and is not
 # committed to the repository.
