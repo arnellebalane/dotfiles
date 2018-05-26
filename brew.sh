@@ -39,7 +39,6 @@ brew install homebrew/dupes/openssh
 
 # zsh
 brew install zsh
-brew install z
 
 # Git
 brew install git
