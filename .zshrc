@@ -21,3 +21,4 @@ source $ZSH/oh-my-zsh.sh
 . .path
 . .prompt
 . .aliases
+. .functions

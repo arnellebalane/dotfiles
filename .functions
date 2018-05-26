@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Nice defaults for the `tree` command, from Wes Bos
+function t() {
+    # Default to 3 levels deep, do more with `t 5` or `t 1`
+    # Ignore .git, node_modules, and bower_components directories
+    tree -I ".git|node_modules|bower_components" \
+        --dirsfirst \
+        --filelimit 25 \
+        -L ${1:-3} \
+        -aC $2
+}
