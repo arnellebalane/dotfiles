@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Initial PATH config, taken from oh-my-zsh's default .zshrc
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
+# Binaries in home directory
+export PATH="$HOME/bin:$PATH"
+
+# Binaries in node_modules in current directory
+export PATH="./node_modules/.bin:$PATH"
