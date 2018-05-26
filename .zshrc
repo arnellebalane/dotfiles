@@ -23,3 +23,7 @@ source $ZSH/oh-my-zsh.sh
 . .prompt
 . .aliases
 . .functions
+
+# Load local .extra file, machine-specific and is not
+# committed to the repository.
+[ -f .extra ] && . .extra
