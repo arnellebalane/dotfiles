@@ -19,6 +19,7 @@ source $ZSH/oh-my-zsh.sh
 # -----------------------------------------------
 
 . .path
+. .exports
 . .prompt
 . .aliases
 . .functions
