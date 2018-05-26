@@ -68,6 +68,9 @@ declare -a DOTFILES=$(
     | sed -e 's|./.|.|'
 )
 
+# Include custom files and directories
+DOTFILES="$DOTFILES bin"
+
 
 
 # Actually create dotfiles symlinks
