@@ -35,7 +35,7 @@ brew cask install typora
 brew cask install transmission
 brew cask install figma
 
-brew csak install postman
+brew cask install postman
 brew cask install tableplus
 brew cask install daisydisk
 
