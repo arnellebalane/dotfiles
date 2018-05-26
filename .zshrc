@@ -18,12 +18,12 @@ source $ZSH/oh-my-zsh.sh
 # Load individual configuration modules
 # -----------------------------------------------
 
-. .path
-. .exports
-. .prompt
-. .aliases
-. .functions
+. ~/.path
+. ~/.exports
+. ~/.prompt
+. ~/.aliases
+. ~/.functions
 
 # Load local .extra file, machine-specific and is not
 # committed to the repository.
-[ -f .extra ] && . .extra
+[ -f ~/.extra ] && . ~/.extra
