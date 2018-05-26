@@ -38,6 +38,7 @@ alias gsp="git stash pop"
 alias gm="git merge"
 alias gcfd="git clean -fd"
 alias grb="git rebase"
+alias gco="git checkout"
 
 
 
