@@ -64,7 +64,6 @@ brew install bat    # better `cat`
 
 brew install httpie
 brew install simplehttp2server
-brew install youtube-dl
 
 brew install nginx
 
