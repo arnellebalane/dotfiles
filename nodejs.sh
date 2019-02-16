@@ -25,10 +25,6 @@ npm install -g trash-cli        # Safe alternative to `rm`
 npm install -g fkill-cli        # Kill processes
 npm install -g gtop             # System monitoring
 
-npm install -g firebase-tools
-npm install -g polymer-cli
-npm install -g netlify-cli
-npm install -g surge
 npm install -g npm-check
 npm install -g serve
 npm install -g lice
