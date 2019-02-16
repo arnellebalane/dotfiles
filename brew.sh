@@ -57,6 +57,7 @@ brew install imagemagick --with-webp
 brew install tree
 brew install ncdu   # analyzes disk usage
 brew install entr   # runs arbitrary commands when files change
+brew install bat    # better `cat`
 
 brew install httpie
 brew install simplehttp2server
