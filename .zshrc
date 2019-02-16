@@ -2,6 +2,7 @@
 
 # -----------------------------------------------
 # Configure and load oh-my-zsh
+# -----------------------------------------------
 
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -15,6 +16,7 @@ source $ZSH/oh-my-zsh.sh
 
 # -----------------------------------------------
 # Additional zsh setup
+# -----------------------------------------------
 
 # https://github.com/rupa/z
 . $HOME/bin/z.sh
@@ -32,6 +34,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
 
 # -----------------------------------------------
 # Basic shell setup
+# -----------------------------------------------
 
 export PS1="🐈 "
 
@@ -47,6 +50,7 @@ export LANG="en_US"
 
 # -----------------------------------------------
 # Configure PATH variable
+# -----------------------------------------------
 
 # Initial PATH, taken from oh-my-zsh's defaults
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -58,6 +62,7 @@ export PATH="$HOME/bin:$PATH"
 
 # -----------------------------------------------
 # Android SDK setup
+# -----------------------------------------------
 
 export PATH="$PATH:$HOME/.android-sdk/tools"
 export PATH="$PATH:$HOME/.android-sdk/tools/bin"
@@ -67,6 +72,7 @@ export PATH="$PATH:$HOME/.android-sdk/platform-tools"
 
 # -----------------------------------------------
 # NodeJS setup
+# -----------------------------------------------
 
 # https://github.com/Schniz/fnm
 eval `fnm env`
@@ -78,6 +84,7 @@ export PATH="./node_modules/.bin:$PATH"
 
 # -----------------------------------------------
 # Python setup
+# -----------------------------------------------
 
 # Load virtualenvwrapper
 # https://virtualenvwrapper.readthedocs.io/en/latest/install.html
@@ -87,6 +94,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # -----------------------------------------------
 # Ruby setup
+# -----------------------------------------------
 
 # Load rbenv
 # https://github.com/rbenv/rbenv#installation
@@ -96,6 +104,7 @@ eval "$(rbenv init -)"
 
 # -----------------------------------------------
 # Load individual configuration modules
+# -----------------------------------------------
 
 . ~/.aliases
 . ~/.functions
@@ -105,5 +114,6 @@ eval "$(rbenv init -)"
 # -----------------------------------------------
 # Load local .extra file, machine-specific and is not
 # committed to the repository.
+# -----------------------------------------------
 
 [ -f ~/.extra ] && . ~/.extra
