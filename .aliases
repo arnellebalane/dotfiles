@@ -62,3 +62,6 @@ alias mm="python manage.py migrate"
 # -----------------------------------------------
 
 alias nrc="npm run commit"
+alias nrs="npm run serve"
+alias cat="bat"
+alias ping="prettyping --nolegend"
