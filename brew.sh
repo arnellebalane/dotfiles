@@ -47,6 +47,9 @@ brew install git-lfs
 brew install hub
 brew install tig
 
+# Development
+brew install rbenv
+
 # Databases
 brew install postgresql
 brew install redis
