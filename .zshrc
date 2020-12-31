@@ -6,7 +6,7 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="refined"
+ZSH_THEME="arnellebalane"
 
 plugins=("zsh-autosuggestions")
 
@@ -36,7 +36,8 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
 # Basic shell setup
 # -----------------------------------------------
 
-export PS1="🐈 "
+# export PS1="🐈 "
+# export PS1="🔥 "
 
 # Set default editors
 export EDITOR="vim"
@@ -80,6 +81,9 @@ eval `fnm env`
 # Add binaries in current node_modules to PATH
 export PATH="./node_modules/.bin:$PATH"
 
+# Enable top-level await in REPL
+export NODE_OPTIONS="--experimental-repl-await"
+
 
 
 # -----------------------------------------------
@@ -117,3 +121,4 @@ eval "$(rbenv init -)"
 # -----------------------------------------------
 
 [ -f ~/.extra ] && . ~/.extra
+

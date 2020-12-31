@@ -31,6 +31,13 @@ set splitbelow                          " Open horizontal split below the curren
 set shell=zsh
 
 
+" Style Config
+" ============
+
+set fillchars+=vert:│
+hi VertSplit cterm=NONE ctermbg=NONE ctermfg=Cyan
+
+
 " Search Config
 " =============
 
@@ -65,3 +72,40 @@ set scrolloff=5                         " Keep this number of lines above/below 
 set sidescrolloff=5                     " Keep this number of columns to the left/right of cursor when scrolling horizontally
 set sidescroll=1                        " How many columns to scroll horizontally
 set ruler                               " Show cursor position and relative position in file
+
+
+" Setup netrw, builtin file explorer
+" https://shapeshed.com/vim-netrw/
+" ==================================
+
+let g:netrw_winsize=25                  " Set the size of the netrw window
+let g:netrw_liststyle=3                 " Display tree-view
+let g:netrw_sort_sequence='[\/]$,*'     " Sort by directories on top, followed by files
+let g:netrw_browse_split=1              " Open files in horizontal split
+let g:netrw_banner=0                    " Remove the banner on top
+
+
+" Setup tcomment plugin for easy comment/uncomment
+" ================================================
+
+noremap <silent> <Leader>cc :TComment<CR>
+
+
+" Setup lightline status line
+" ===========================
+
+set noshowmode
+
+
+" Plug configs
+" https://github.com/junegunn/vim-plug
+" ====================================
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'tomtom/tcomment_vim'
+Plug 'itchyny/lightline.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'airblade/vim-gitgutter'
+
+call plug#end()
