@@ -42,32 +42,15 @@ brew install zsh
 
 # Git
 brew install git
-brew install git-lfs
-
-brew install hub
 brew install tig
-
-# Development
-brew install rbenv
 
 # Databases
 brew install postgresql
 brew install redis
-brew install mongodb
 
-# Other usefil binaries
-brew install imagemagick --with-webp
-brew install tree
-brew install ncdu   # analyzes disk usage
-brew install entr   # runs arbitrary commands when files change
-brew install bat    # better `cat`
-
-brew install httpie
+# Development
 brew install simplehttp2server
-
 brew install nginx
-
-
 
 # -----------------------------------------------
 # Remove oudated package versions

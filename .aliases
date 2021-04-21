@@ -48,14 +48,11 @@ alias gco="git checkout"
 # Django aliases
 # -----------------------------------------------
 
-alias bm="./bin/manage"
-alias bmr="./bin/manage runserver"
-alias bmm="./bin/manage migrate"
-alias bmc="./bin/manage collectstatic"
-alias bms="./bin/manage shell"
 alias m="python manage.py"
 alias mr="python manage.py runserver"
 alias mm="python manage.py migrate"
+alias ms="python manage.py shell"
+alias mc="python manage.py collectstatic"
 
 
 
@@ -63,7 +60,5 @@ alias mm="python manage.py migrate"
 # Other aliases
 # -----------------------------------------------
 
-alias nrc="npm run commit"
-alias nrs="npm run serve"
-alias cat="bat"
 alias ping="prettyping --nolegend"
+alias tmux='tmux -2'
