@@ -1,6 +1,21 @@
+[core]
+    pager = delta
+
 [user]
     email = arnellebalane@gmail.com
     name = Arnelle Balane
+
+[commit]
+    gpgsign = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[init]
+    defaultBranch = main
 
 [color]
     ui = auto
@@ -9,3 +24,25 @@
     current = yellow bold
     local = yellow
     remote = blue
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+[add.interactive]
+    useBuiltin = false # required for git 2.37.0
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    features = decorations
+    line-numbers = true
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    hunk-header-style = omit
+    map-styles = "bold purple => syntax #330f29, bold blue => syntax #271344, bold cyan => syntax #0d3531, bold yellow => syntax #222f14"
