@@ -6,7 +6,7 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="arnellebalane"
+# ZSH_THEME="robbyrussell"
 
 plugins=("zsh-autosuggestions")
 
@@ -29,6 +29,14 @@ bindkey "^[x" autosuggest-execute
 bindkey "^[t" autosuggest-toggle
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
+
+# Pure prompt setup
+# https://github.com/sindresorhus/pure#homebrew
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+autoload -U promptinit; promptinit
+prompt pure
+
+export PURE_PROMPT_SYMBOL="🐈"
 
 
 
@@ -61,13 +69,20 @@ export PATH="$HOME/bin:$PATH"
 
 
 
+# ----------------------------------------------
+# Homebrew setup
+# ----------------------------------------------
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
+
 # -----------------------------------------------
 # Android SDK setup
 # -----------------------------------------------
 
-export PATH="$PATH:$HOME/.android-sdk/tools"
-export PATH="$PATH:$HOME/.android-sdk/tools/bin"
-export PATH="$PATH:$HOME/.android-sdk/platform-tools"
+# export PATH="$PATH:$HOME/.android-sdk/tools"
+# export PATH="$PATH:$HOME/.android-sdk/tools/bin"
+# export PATH="$PATH:$HOME/.android-sdk/platform-tools"
 
 
 
@@ -92,7 +107,12 @@ export NODE_OPTIONS="--experimental-repl-await"
 
 # Load virtualenvwrapper
 # https://virtualenvwrapper.readthedocs.io/en/latest/install.html
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
+
+# Initialize pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
 
 
 
@@ -102,7 +122,15 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Load rbenv
 # https://github.com/rbenv/rbenv#installation
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
+
+
+
+# -----------------------------------------------
+# Google Cloud SDK setup
+# -----------------------------------------------
+
+export PATH="$PATH:$HOME/.gcloud/bin"
 
 
 

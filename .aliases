@@ -41,6 +41,7 @@ alias gcfd="git clean -fd"
 alias grb="git rebase"
 alias gcp="git cherry-pick"
 alias gco="git checkout"
+alias gt="git tag"
 
 
 
@@ -63,7 +64,7 @@ alias mm="python manage.py migrate"
 # Other aliases
 # -----------------------------------------------
 
-alias nrc="npm run commit"
-alias nrs="npm run serve"
+# alias nrc="npm run commit"
+# alias nrs="npm run serve"
 alias cat="bat"
-alias ping="prettyping --nolegend"
+# alias ping="prettyping --nolegend"
