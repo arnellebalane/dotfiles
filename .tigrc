@@ -1,3 +1,4 @@
 set main-view-id = yes
-set main-view-date = custom
+set main-view-author = no
+set main-view-date = no
 set main-view-date-format = "%Y-%m-%d %H:%M:%S"

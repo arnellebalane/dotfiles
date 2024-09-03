@@ -4,6 +4,7 @@
 # General aliases
 #------------------------------------------------
 
+alias ls="eza --icons"
 alias la="ls -a"
 alias ll="ls -lh"
 alias lla="ls -lha"
@@ -67,4 +68,6 @@ alias mm="python manage.py migrate"
 # alias nrc="npm run commit"
 # alias nrs="npm run serve"
 alias cat="bat"
+alias vi="nvim"
+alias vim="nvim"
 # alias ping="prettyping --nolegend"
