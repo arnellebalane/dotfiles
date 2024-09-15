@@ -1,0 +1,19 @@
+[delta "darkmoss"]
+    # author: https://github.com/arnellebalane
+    dark = true
+    line-numbers = true
+    line-numbers-minus-style = "#ff4658"
+    line-numbers-plus-style = "#499180"
+    file-added-label = "[added]"
+    file-copied-label = "[copied]"
+    file-modified-label = "[modified]"
+    file-removed-label = "[removed]"
+    file-renamed-label = "[renamed]"
+    file-style = "#498091" bold
+    file-decoration-style = "#498091" underline
+    hunk-header-style = omit
+    minus-style = syntax "#52161C"
+    minus-emph-style = syntax "#ff4658"
+    plus-style = syntax "#1D3A33"
+    plus-emph-style = syntax "#499180"
+    map-styles = "bold purple => syntax #322306, bold cyan => syntax #322306"
