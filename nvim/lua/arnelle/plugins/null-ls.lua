@@ -15,10 +15,12 @@ return {
                 diagnostics.markdownlint,
                 diagnostics.tsc,
                 -- formatting.eslint,
+                formatting.black,
                 formatting.markdownlint,
                 formatting.prettier.with({
                     extra_filetypes = {
                         'astro',
+                        'svelte',
                     }
                 }),
                 formatting.stylelint,

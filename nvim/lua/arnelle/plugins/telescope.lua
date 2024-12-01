@@ -30,7 +30,7 @@ return {
                 mappings = {
                     i = {
                         ['<C-k>'] = actions.move_selection_previous, -- move to previous result
-                        ['<C-j>'] = actions.move_selection_next, -- move to next  result
+                        ['<C-j>'] = actions.move_selection_next,     -- move to next  result
                     },
                 },
                 sorting_strategy = 'ascending',
@@ -50,9 +50,12 @@ return {
         -- set keymaps
         vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find files in cwd', silent = true })
         vim.keymap.set('n', '<leader>fs', builtin.live_grep, { desc = 'Find string in cwd', silent = true })
-        vim.keymap.set('n', '<leader>fc', builtin.grep_string, { desc = 'Find string under cursor in  cwd', silent = true })
+        vim.keymap.set('n', '<leader>fc', builtin.grep_string,
+            { desc = 'Find string under cursor in  cwd', silent = true })
         vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Find buffers', silent = true })
         vim.keymap.set('n', '<leader>fg', builtin.git_files, { desc = 'Find files in git project', silent = true })
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Find string in help pages', silent = true })
+        vim.keymap.set('n', '<leader>fr', builtin.lsp_references, { desc = 'Find references', silent = true })
+        vim.keymap.set('n', '<leader>fm', builtin.resume, { desc = 'Resume last search', silent = true })
     end
 }

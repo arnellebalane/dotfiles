@@ -26,22 +26,20 @@ return {
                 'cssls',
                 'css_variables',
                 'cssmodules_ls',
+                'denols',
                 'emmet_language_server',
                 'eslint',
                 'html',
                 'jsonls',
                 'lua_ls',
                 'marksman',
+                'pyright',
                 'svelte',
                 'tailwindcss',
                 'vuels',
             },
             handlers = {
                 function(server_name)
-                    if server_name == 'tsserver' then
-                        -- https://github.com/neovim/nvim-lspconfig/pull/3232#issuecomment-2331025714
-                        server_name = 'ts_ls'
-                    end
                     lspconfig[server_name].setup({
                         capabilities = capabilities,
                     })
@@ -75,6 +73,27 @@ return {
                                 },
                             },
                         },
+                    })
+                end,
+                denols = function()
+                    lspconfig.denols.setup({
+                        capabilities = capabilities,
+                        root_dir = lspconfig.util.root_pattern('deno.json', 'deno.jsonc', 'import_map.json'),
+                    })
+                end,
+                ts_ls = function()
+                    lspconfig.ts_ls.setup({
+                        capabilities = capabilities,
+                        single_file_support = false,
+                        root_dir = function(filename)
+                            local deno_root = lspconfig.util.root_pattern(
+                                'deno.json', 'deno.jsonc', 'import_map.json'
+                            )(filename)
+                            if (deno_root) then
+                                return nil
+                            end
+                            return lspconfig.util.root_pattern('package.json')(filename)
+                        end
                     })
                 end,
             },
@@ -134,5 +153,16 @@ return {
                 client.server_capabilities.semanticTokensProvider = nil
             end
         })
+
+        -- keymaps
+        vim.keymap.set('n', 'gd', '<C-]>', { desc = 'Go to definition' })
+
+        -- enable floating window borders
+        local open_floating_preview = vim.lsp.util.open_floating_preview
+        function vim.lsp.util.open_floating_preview(contents, syntax, options, ...)
+            options = options or {}
+            options.border = options.border or 'rounded'
+            return open_floating_preview(contents, syntax, options, ...)
+        end
     end,
 }

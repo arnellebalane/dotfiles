@@ -16,4 +16,8 @@ utils.bold = function(group)
     vim.cmd('highlight ' .. group .. ' gui=bold')
 end
 
+utils.normal = function(group)
+    vim.cmd('highlight ' .. group .. ' gui=none')
+end
+
 return utils

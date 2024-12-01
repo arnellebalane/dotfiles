@@ -39,6 +39,7 @@ return {
                 'cpp',
                 'arduino',
                 'astro',
+                'python',
             },
             incremental_selection = {
                 enable = true,
@@ -92,6 +93,11 @@ return {
         utils.fg('TSType', colors.base04)
         utils.fg('TSNamespace', colors.base04)
         utils.fg('TSTypeBuiltin', colors.base04)
+
+        utils.normal('TSComment')
+        utils.normal('TSVariableBuiltin')
+        utils.normal('TSFuncBuiltin')
+        utils.normal('TSTypeBuiltin')
 
         vim.api.nvim_set_hl(0, '@constant.builtin', { link = 'TSBoolean' })
         vim.api.nvim_set_hl(0, '@keyword.exception', { link = 'TSKeyword' })

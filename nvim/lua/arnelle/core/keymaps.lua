@@ -10,6 +10,8 @@ vim.keymap.set('i', '<C-k>', '<Up>')
 vim.keymap.set('i', '<C-l>', '<Right>')
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = false })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = false })
+vim.keymap.set('n', '{', '{zz', { noremap = false })
+vim.keymap.set('n', '}', '}zz', { noremap = false })
 
 vim.keymap.set('n', '<leader>mj', ':move +1<CR>', { noremap = false, silent = true })
 vim.keymap.set('n', '<leader>mk', ':move -2<CR>', { noremap = false, silent = true })
@@ -19,3 +21,6 @@ vim.keymap.set('n', '<leader>se', ':vsplit<CR>', { desc = 'Split window vertical
 vim.keymap.set('n', '<leader>so', ':split<CR>', { desc = 'Split window horizontally', silent = true })
 vim.keymap.set('n', '<leader>s=', '<C-w>=', { desc = 'Make splits equal size', silent = true })
 vim.keymap.set('n', '<leader>sx', ':close<CR>', { desc = 'Close current split', silent = true })
+
+-- refactoring
+vim.keymap.set('n', '<leader>rs', vim.lsp.buf.rename, { desc = 'Rename symbol' })
