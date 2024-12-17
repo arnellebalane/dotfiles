@@ -1,5 +1,5 @@
 return {
-    'jose-elias-alvarez/null-ls.nvim',
+    'nvimtools/none-ls.nvim',
     config = function()
         local null_ls = require('null-ls')
         local actions = null_ls.builtins.code_actions
@@ -10,22 +10,16 @@ return {
 
         null_ls.setup({
             sources = {
-                actions.eslint,
-                diagnostics.eslint,
-                diagnostics.markdownlint,
-                diagnostics.tsc,
+                -- actions.eslint,
+                -- diagnostics.eslint,
+                -- diagnostics.markdownlint,
+                -- diagnostics.tsc,
                 -- formatting.eslint,
                 formatting.black,
-                formatting.markdownlint,
-                formatting.prettier.with({
-                    extra_filetypes = {
-                        'astro',
-                        'svelte',
-                    }
-                }),
-                formatting.stylelint,
-                formatting.trim_newlines,
-                formatting.trim_whitespace,
+                formatting.prettier,
+                -- formatting.stylelint,
+                -- formatting.trim_newlines,
+                -- formatting.trim_whitespace,
             },
             on_attach = function(client, bufnr)
                 if client.supports_method('textDocument/formatting') then

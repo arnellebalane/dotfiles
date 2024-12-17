@@ -40,6 +40,7 @@ return {
                 'arduino',
                 'astro',
                 'python',
+                'sql',
             },
             incremental_selection = {
                 enable = true,

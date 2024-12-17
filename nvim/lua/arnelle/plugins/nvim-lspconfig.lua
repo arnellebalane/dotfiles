@@ -78,7 +78,7 @@ return {
                 denols = function()
                     lspconfig.denols.setup({
                         capabilities = capabilities,
-                        root_dir = lspconfig.util.root_pattern('deno.json', 'deno.jsonc', 'import_map.json'),
+                        root_dir = lspconfig.util.root_pattern('deno.json', 'deno.jsonc'),
                     })
                 end,
                 ts_ls = function()
@@ -86,9 +86,7 @@ return {
                         capabilities = capabilities,
                         single_file_support = false,
                         root_dir = function(filename)
-                            local deno_root = lspconfig.util.root_pattern(
-                                'deno.json', 'deno.jsonc', 'import_map.json'
-                            )(filename)
+                            local deno_root = lspconfig.util.root_pattern('deno.json', 'deno.jsonc')(filename)
                             if (deno_root) then
                                 return nil
                             end
@@ -96,6 +94,16 @@ return {
                         end
                     })
                 end,
+                eslint = function()
+                    lspconfig.eslint.setup({
+                        capabilities = capabilities,
+                        settings = {
+                            experimental = {
+                                useFlatConfig = true
+                            },
+                        }
+                    })
+                end
             },
         })
 
