@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # ZSH_THEME="robbyrussell"
 
-plugins=("zsh-autosuggestions")
+plugins=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -32,11 +32,11 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
 
 # Pure prompt setup
 # https://github.com/sindresorhus/pure#homebrew
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
+fpath+=("/opt/homebrew/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
 
-export PURE_PROMPT_SYMBOL="🐈"
+export PURE_PROMPT_SYMBOL="🔥"
 
 
 
@@ -53,6 +53,7 @@ export GIT_EDITOR="vim"
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 export LANG="en_US"
 
 
@@ -130,7 +131,7 @@ eval "$(pyenv virtualenv-init -)"
 # Google Cloud SDK setup
 # -----------------------------------------------
 
-export PATH="$PATH:$HOME/.gcloud/bin"
+export PATH="$PATH:$HOME/.google-cloud-sdk/bin"
 
 
 
