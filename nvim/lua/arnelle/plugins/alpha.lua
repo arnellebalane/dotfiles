@@ -1,6 +1,5 @@
 return {
     'goolord/alpha-nvim',
-    event = 'VimEnter',
     config = function()
         local alpha = require('alpha')
         local dashboard = require('alpha.themes.dashboard')
@@ -19,12 +18,12 @@ return {
 
         -- set menu
         dashboard.section.buttons.val = {
-            dashboard.button('e', '  > New File', ':ene<CR>'),
-            dashboard.button('SPC ee', '  > Toggle file explorer', ':NvimTreeToggle<CR>'),
-            dashboard.button('SPC ff', '󰱼  > Find File', ':Telescope find_files<CR>'),
-            dashboard.button('SPC fs', '  > Find Word', ':Telescope live_grep<CR>'),
-            dashboard.button('SPC wr', '󰁯  > Restore Session For Current Directory', ':SessionRestore<CR>'),
-            dashboard.button('q', '  > Quit NVIM', ':qa<CR>'),
+            dashboard.button('e', '  New file', ':ene<CR>'),
+            dashboard.button('SPC ee', '  Toggle file explorer', ':NvimTreeToggle<CR>'),
+            dashboard.button('SPC ff', '󰱼  Find file', ':Telescope find_files<CR>'),
+            dashboard.button('SPC fs', '  Find word', ':Telescope live_grep<CR>'),
+            dashboard.button('SPC wr', '󰁯  Restore session for current directory', ':SessionRestore<CR>'),
+            dashboard.button('q', '  Quit Neovim', ':qa<CR>'),
         }
 
         -- send config to alpha
