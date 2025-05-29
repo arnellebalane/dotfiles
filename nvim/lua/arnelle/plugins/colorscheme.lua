@@ -14,6 +14,7 @@ return {
         utils.fg_bg('FloatTitle', colors.base05, colors.base02)
         utils.fg_bg('LineNr', colors.base03, 'none')
         utils.fg('WinSeparator', colors.base01)
+        utils.bg('ColorColumn', colors.base14)
 
         -- trouble.nvim
         utils.fg('TroubleCode', colors.base04)

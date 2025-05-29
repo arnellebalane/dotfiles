@@ -4,6 +4,8 @@ vim.cmd('let g:netrw_liststyle = 3')
 vim.opt.relativenumber = true
 vim.opt.number = true
 
+vim.opt.colorcolumn = "80,120"
+
 -- tabs and indentations
 vim.opt.tabstop = 2       -- spaces for tabs
 vim.opt.shiftwidth = 2    -- spaces for indent width
