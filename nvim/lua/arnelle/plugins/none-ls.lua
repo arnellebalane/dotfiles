@@ -15,6 +15,7 @@ return {
                 -- formatting.eslint,
                 formatting.black,
                 formatting.prettier,
+                -- formatting.biome,
                 -- formatting.stylelint,
                 -- formatting.trim_newlines,
                 -- formatting.trim_whitespace,

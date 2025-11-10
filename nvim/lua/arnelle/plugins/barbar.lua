@@ -59,5 +59,6 @@ return {
         utils.fg_bg('BufferDefaultCurrentMod', colors.base05, colors.base08)
         utils.bold('BufferDefaultCurrentMod')
         utils.fg_bg('BufferDefaultCurrentModIcon', colors.base05, colors.base08)
+        utils.bg('TablineFill', 'none')
     end
 }

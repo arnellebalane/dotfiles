@@ -1,8 +1,5 @@
 return {
     'folke/trouble.nvim',
-    opts = {
-        focus = true,
-    },
     cmd = 'Trouble',
     keys = {
         {
@@ -18,4 +15,20 @@ return {
             silent = true,
         },
     },
+    config = function ()
+        require('trouble').setup({
+            focus = true,
+        })
+
+        -- auto commands
+        local group = vim.api.nvim_create_augroup('TroubleAutoCmd', { clear = true })
+        vim.api.nvim_create_autocmd('BufEnter', {
+            group = group,
+            callback = function ()
+                if vim.bo.filetype == 'trouble' then
+                    vim.wo.wrap = true
+                end
+            end,
+        })
+    end,
 }

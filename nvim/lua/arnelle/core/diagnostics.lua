@@ -12,4 +12,18 @@ vim.diagnostic.config({
             vim.diagnostic.severity.WARN,
         },
     },
+    float = {
+        header = '',
+        close_events = {
+            'CursorMoved',
+            'BufHidden',
+            'LspDetach',
+        },
+        suffix = function (diagnostic)
+            return ' ' .. diagnostic.source .. '(' .. diagnostic.code .. ')'
+        end,
+    },
 })
+
+-- keymaps
+vim.keymap.set('n', 'J', vim.diagnostic.open_float)

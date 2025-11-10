@@ -16,7 +16,7 @@ return {
             local layout = layouts.horizontal(picker, max_columns, max_lines, layout_config)
             layout.prompt.title = ''
             layout.results.title = ''
-            layout.preview.title = ''
+            -- layout.preview.title = ''
             return layout
         end
 
@@ -38,8 +38,9 @@ return {
                 layout_config = {
                     horizontal = {
                         prompt_position = 'top',
-                        width = 0.75,
+                        width = 100,
                         height = 0.5,
+                        preview_width = 0,
                     },
                 },
             },
