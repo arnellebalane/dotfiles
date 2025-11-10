@@ -1,21 +1,16 @@
 #!/usr/bin/env bash
 
-function open_project() {
-    local project_path="$(fd . ~/dev --type directory --max-depth 1 | fzf)"
-    local project_name="$(echo $project_path | cut -d '/' -f 5)"
-    local session_name=$(get_session_name $project_name)
+function select_project() {
+    project_path="$(/opt/homebrew/bin/fd . ~/dev --type directory --max-depth 1 | /opt/homebrew/bin/fzf)" || return
+    project_name="$(echo $project_path | cut -d '/' -f 5)"
+    session_name="$(echo $project_name | sed "s/\./_/g")"
 
-    tmux list-sessions -F "#S" | grep $session_name
-    if [[ $? -ne 0 ]]; then
-        tmux new-session -ds $session_name -c $project_path -n code -- nvim
-        tmux new-window -dt "${session_name}:" -c $project_path -n cli
+    /opt/homebrew/bin/tmux has-session -t $session_name 2> /dev/null
+    if [ $? -ne 0 ]; then
+        /opt/homebrew/bin/tmux new-session -ds $session_name -c $project_path -n code -- /opt/homebrew/bin/nvim
+        /opt/homebrew/bin/tmux new-window -dt "${session_name}:" -c $project_path -n cli
     fi
-    tmux switch-client -t $session_name
+    /opt/homebrew/bin/tmux switch-client -t $session_name
 }
 
-function get_session_name() {
-    local name=$(echo $1 | sed "s/\./_/g")
-    echo $name
-}
-
-open_project
+select_project
