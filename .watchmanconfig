@@ -1,0 +1,7 @@
+{
+  "root_files": [".git"],
+  "enforce_root_files": true,
+  "ignore_dirs": [".git"],
+  "ignore_vcs": true
+}
+
