@@ -70,6 +70,7 @@ return {
         utils.fg('TSFuncMacro', colors.base0A)
         utils.fg('TSPunctDelimiter', colors.base04)
         utils.fg('TSPunctBracket', colors.base04)
+        utils.fg('TSPunctSpecial', colors.base04)
         utils.fg('TSNumber', colors.base0B)
         utils.fg('TSFloat', colors.base0B)
         utils.fg('TSBoolean', colors.base0B)
@@ -105,5 +106,6 @@ return {
         vim.api.nvim_set_hl(0, '@property.css', { link = 'TSField' })
         vim.api.nvim_set_hl(0, '@tag.attribute.css', { link = 'TSTitle' })
         vim.api.nvim_set_hl(0, '@property.json', { link = 'TSField' })
+        vim.api.nvim_set_hl(0, '@tag.builtin.tsx', { link = 'TSTag' })
     end
 }
