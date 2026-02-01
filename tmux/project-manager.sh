@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function select_project() {
+function open_project() {
     project_path="$(/opt/homebrew/bin/fd . ~/dev --type directory --max-depth 1 | /opt/homebrew/bin/fzf)" || return
     project_name="$(echo $project_path | cut -d '/' -f 5)"
     session_name="$(echo $project_name | sed "s/\./_/g")"
@@ -13,4 +13,17 @@ function select_project() {
     /opt/homebrew/bin/tmux switch-client -t $session_name
 }
 
-select_project
+function select_session() {
+    selected_session="$(/opt/homebrew/bin/tmux list-sessions -F "#S" | awk '$1 !~ "default" { print $1 }' | /opt/homebrew/bin/fzf)" || return
+    /opt/homebrew/bin/tmux switch-client -t $selected_session
+}
+
+command=$1
+
+case $command in
+    "open-project")
+        open_project;;
+
+    "select-session")
+        select_session;;
+esac
