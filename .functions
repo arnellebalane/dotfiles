@@ -21,3 +21,21 @@ function fnm-reinstall-packages-from() {
         | tr '\n' ' ' \
     )
 }
+
+# Wrapper around ssh command to set tmux pane title
+ssh() {
+    if [[ -n "$TMUX" ]]; then
+        tmux set -g key-table remote
+        tmux set -g status on
+    fi
+
+    local target="${@: -1}"
+    printf '\033]2;%s\033\\' "$target"
+    command ssh "$@"
+    printf '\033]2;\033\\'
+
+    if [[ -n "$TMUX" ]]; then
+        tmux set -g key-table root
+        tmux set -g status off
+    fi
+}
