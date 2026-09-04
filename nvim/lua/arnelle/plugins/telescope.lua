@@ -49,7 +49,12 @@ return {
         telescope.load_extension('fzf')
 
         -- set keymaps
-        vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find files in cwd', silent = true })
+        vim.keymap.set('n', '<leader>ff', function()
+            builtin.find_files({
+                hidden = true,
+                file_ignore_patterns = { '%.git/' },
+            })
+        end, { desc = 'Find files in cwd', silent = true })
         vim.keymap.set('n', '<leader>fs', builtin.live_grep, { desc = 'Find string in cwd', silent = true })
         vim.keymap.set('n', '<leader>fc', builtin.grep_string,
             { desc = 'Find string under cursor in  cwd', silent = true })
