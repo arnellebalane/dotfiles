@@ -28,6 +28,7 @@ return {
                 'oxfmt',
                 'oxlint',
                 'pyright',
+                'ruff',
                 'svelte',
                 'tailwindcss',
                 'ts_ls',
