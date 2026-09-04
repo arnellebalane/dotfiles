@@ -4,7 +4,7 @@
 # General aliases
 #------------------------------------------------
 
-alias ls="eza --icons"
+alias ls="eza --icons never"
 alias la="ls -a"
 alias ll="ls -lh"
 alias lla="ls -lha"
@@ -68,6 +68,8 @@ alias mm="python manage.py migrate"
 # alias nrc="npm run commit"
 # alias nrs="npm run serve"
 alias cat="bat"
+alias nvim="nvim --listen ./nvim.sock"
 alias vi="nvim"
 alias vim="nvim"
-# alias ping="prettyping --nolegend"
+alias dm="bash $HOME/dev/dotfiles/tmux/dev-panes.sh"
+alias f="cd \$(fd . ~/dev --type directory --max-depth 1 | fzf)"
