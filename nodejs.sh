@@ -1,17 +1,11 @@
 #!/bin/bash
 
 # -----------------------------------------------
-# Install NodeJS via nvm
+# Install NodeJS via mise
 # -----------------------------------------------
 
-# Tells nvm to update the `.zsh_profile` profile
-export PROFILE="$HOME/.zsh_profile"
-
-# Instal nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-
-# Reload shell profile to load nvm script
-source $PROFILE
+mise install node@lts
+mise use node@lts
 
 
 
@@ -20,7 +14,6 @@ source $PROFILE
 # -----------------------------------------------
 
 npm install -g git-open         # Opens a repository's Github page
-npm install -g diff-so-fancy    # Fancy `git diff` display
 npm install -g trash-cli        # Safe alternative to `rm`
 npm install -g fkill-cli        # Kill processes
 npm install -g gtop             # System monitoring
@@ -28,8 +21,3 @@ npm install -g gtop             # System monitoring
 npm install -g npm-check
 npm install -g serve
 npm install -g lice
-npm install -g yarn
-
-# Alfred plugins
-npm install -g alfred-fkill
-npm install -g alfred-show-network-info

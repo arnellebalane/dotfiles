@@ -5,38 +5,38 @@
 # -----------------------------------------------
 
 # Dev packages
-brew cask install iterm2
-brew cask install sublime-text
-brew cask install visual-studio-code
-brew cask install atom
-brew cask install atom-beta
+brew install --cask wezterm
+brew install --cask sublime-text
+brew install --cask visual-studio-code
+brew install --cask claude
+brew install --cask claude-code
+brew install --cask codex
+brew install --cask font-hack-nerd-font
+brew install --cask font-meslo-lg-nerd-font
+brew install --cask gpg-suite
+brew install --cask docker
+brew install --cask docker-desktop
 
 # Browsers
-brew cask install google-chrome-canary
-brew cask install google-chrome
-brew cask install firefox
-brew cask install firefox-developer-edition
-brew cask install chromium
+brew install --cask google-chrome
+brew install --cask firefox
+brew install --cask chromium
 
 # Communications
-brew cask install slack
-brew cask install skype
+brew install --cask slack
+brew install --cask discord
 
 # Media
-brew cask install spotify
-brew cask install vlc
+brew install --cask spotify
+brew install --cask iina
 
 # Other useful applications
-brew cask install alfred
-brew cask install notion
-brew cask install transmission
-brew cask install figma
-
-brew cask install postman
-brew cask install tableplus
-brew cask install daisydisk
-
-brew cask install docker
+brew install --cask raycast
+brew install --cask rectangle
+brew install --cask figma
+brew install --cask tableplus
+brew install --cask daisydisk
+brew install --cask 1password
 
 
 

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Run relative to this script's location, regardless of the caller's cwd
+cd "$(dirname "${BASH_SOURCE[0]}")" || exit 1
+
+
+
 # -----------------------------------------------
 # Setup Homebrew and install packages
 # -----------------------------------------------
@@ -21,10 +26,16 @@
 # Setup oh-my-zsh
 # -----------------------------------------------
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    RUNZSH=no CHSH=no KEEP_ZSHRC=yes \
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi
+
+ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 
 # Install oh-my-zsh plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
+[ -d "$ZSH_CUSTOM/plugins/zsh-autosuggestions" ] \
+    || git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
 
 
 

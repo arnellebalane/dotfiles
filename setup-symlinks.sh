@@ -56,42 +56,52 @@ execute() {
 
 
 
-# Find all .dotfiles in this directory
+# Links to create, as "source (relative to this repo):target (absolute)" pairs
 
-declare -a DOTFILES=$(
-    find . -type f -maxdepth 1 \
-    -name ".*" \
-    -not -name .DS_Store \
-    -not -name .git \
-    -not -name .osx \
-    | sed -e 's|//|/|' \
-    | sed -e 's|./.|.|'
+declare -a LINKS=(
+    # Top-level dotfiles
+    ".aliases:$HOME/.aliases"
+    ".functions:$HOME/.functions"
+    ".gitconfig:$HOME/.gitconfig"
+    ".gitignore:$HOME/.gitignore"
+    ".tigrc:$HOME/.tigrc"
+    ".vimrc:$HOME/.vimrc"
+    ".watchmanconfig:$HOME/.watchmanconfig"
+    ".zshrc:$HOME/.zshrc"
+
+    # Custom files and directories that don't follow the "dotfile at repo
+    # root links to same-named file at $HOME root" convention above
+    "bin:$HOME/bin"
+    "nvim:$HOME/.config/nvim"
+    "wezterm:$HOME/.config/wezterm"
+    "tmux/.tmux.conf:$HOME/.tmux.conf"
 )
 
-# Include custom files and directories
-DOTFILES="$DOTFILES bin"
 
 
-
-# Actually create dotfiles symlinks
+# Actually create the symlinks
 main() {
 
-    local i=""
+    local entry=""
+    local sourceRelative=""
     local sourceFile=""
     local targetFile=""
 
-    for i in ${DOTFILES[@]}; do
+    for entry in "${LINKS[@]}"; do
 
-        sourceFile="$(pwd)/$i"
-        targetFile="$HOME/$(printf "%s" "$i" | sed "s/.*\/\(.*\)/\1/g")"
+        sourceRelative="${entry%%:*}"
+        targetFile="${entry#*:}"
+        sourceFile="$(pwd)/$sourceRelative"
 
-        if [ -e "$targetFile" ]; then
+        mkdir -p "$(dirname "$targetFile")"
+
+        if [ -e "$targetFile" ] || [ -L "$targetFile" ]; then
             if [ "$(readlink "$targetFile")" != "$sourceFile" ]; then
 
                 ask_for_confirmation "'$targetFile' already exists, do you want to overwrite it?"
 
                 if answer_is_yes; then
-                    rm -rf "$targetFile"
+                    execute "mv $targetFile $targetFile.bak" "Backed up $targetFile → $targetFile.bak"
                     execute "ln -fs $sourceFile $targetFile" "$targetFile → $sourceFile"
                 else
                     print_error "$targetFile → $sourceFile"
