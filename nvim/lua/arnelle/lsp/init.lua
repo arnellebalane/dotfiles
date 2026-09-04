@@ -4,6 +4,8 @@ vim.lsp.config('*', {
     capabilities = capabilities,
 })
 
+vim.lsp.document_color.enable(true, nil, { style = 'virtual' })
+
 require('arnelle.lsp.servers.arduino_language_server')
 require('arnelle.lsp.servers.biome')
 require('arnelle.lsp.servers.clangd')
