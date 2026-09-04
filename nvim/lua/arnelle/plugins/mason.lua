@@ -25,6 +25,8 @@ return {
                 'jsonls',
                 'lua_ls',
                 'marksman',
+                'oxfmt',
+                'oxlint',
                 'pyright',
                 'svelte',
                 'tailwindcss',
