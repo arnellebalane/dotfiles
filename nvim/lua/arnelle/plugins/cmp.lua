@@ -12,6 +12,7 @@ return {
             behavior = cmp.SelectBehavior.Select,
         }
         local border_options = {
+            border = 'rounded',
             winhighlight = 'Normal:CmpDocNormal,FloatBorder:CmpDocBorder',
         }
 
